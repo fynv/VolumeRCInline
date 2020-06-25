@@ -3,7 +3,7 @@ import math
 import VkInline as vki
 from VkInline.SVCombine import *
 
-class Camera:
+class Camera(vki.ShaderViewable):
 	def __init__(self, width, height, origin, lookat, vup, vfov, aperture=0.0, focus_dist=1.0):
 		theta = vfov * math.pi / 180.0
 		half_height = math.tan(theta*0.5)*focus_dist
